@@ -1,0 +1,23 @@
+[08:00:03] [ERROR] [FabricLoader/GameProvider]: No game providers present on the class path!
+[08:00:03] [ERROR] [FabricLoader/]: Uncaught exception in thread "main"
+java.lang.RuntimeException: No game providers present on the class path!
+	at net.fabricmc.loader.impl.launch.knot.Knot.createGameProvider(Knot.java:212)
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:130)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:68)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	Suppressed: java.lang.ExceptionInInitializerError
+		at net.fabricmc.loader.impl.gui.FabricGuiEntry.displayError(FabricGuiEntry.java:127)
+		at net.fabricmc.loader.impl.gui.FabricGuiEntry.displayError(FabricGuiEntry.java:108)
+		at net.fabricmc.loader.impl.launch.FabricLauncherBase$1.uncaughtException(FabricLauncherBase.java:110)
+		at java.base/java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:695)
+		at java.base/java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:690)
+		at java.base/java.lang.Thread.dispatchUncaughtException(Thread.java:2902)
+	Caused by: java.util.MissingResourceException: Can't find bundle for base name net.fabricmc.loader.Messages, locale en_US
+		at java.base/java.util.ResourceBundle.throwMissingResourceException(ResourceBundle.java:2059)
+		at java.base/java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1697)
+		at java.base/java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1600)
+		at java.base/java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1555)
+		at java.base/java.util.ResourceBundle.getBundle(ResourceBundle.java:935)
+		at net.fabricmc.loader.impl.util.Localization.createBundle(Localization.java:72)
+		at net.fabricmc.loader.impl.util.Localization.<clinit>(Localization.java:29)
+		... 6 more
